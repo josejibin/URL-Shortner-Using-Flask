@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <title>URL Shortener</title>
+  </head>
+  <body>
+    <div class="container">
+        <h1>URLShortener</h1>
+        <form action="{{ url_for('home') }}" method="post" >
+            Orginal Url: <input type="text" name="org_url"><br>
+            <input type="submit" value="create"><br><br>
+            {% for post in posts%}
+
+           {{ post.shortened_url }} :  {{ post.original_url }}  <br>
+
+            {% endfor %}
+        </form>
+    </div>
+  </body>
+</html>
